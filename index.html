@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="desktop.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -16,23 +15,28 @@
 <body>
     <header>
         <!--logo principal-->
-        <a href="index.html" class="main-logo"><img src="" alt="logo Kazan Smartcity"></a>
+        <a href="index.html" class="main-logo"><!--position relative-->
+            <h1>Kazan - The ultimate competition of WorldSkills - Compétition World Skills</h1><!--masquer-->
+            <img src="" alt="logo Kazan Smartcity">
+        </a>
 
         <!--Hamburger-->
-        <span class="ham-button">
+        <div class="ham-button">
             <span></span>
             <span></span>
             <span></span>
-        </span>
+        </div>
         <!--Hamburger fin-->
 
         <!--menu principal-->
         <nav class="main-nav">
             <ul class="main-nav-list">
+
+                <!--search start-->
                 <li class="search">
                     <span class="search-button"></span>
                     <form action="" method="get"></form>
-                        <label for="search"></label>
+                        <label for="search">Entrez votre recherche</label>
                         <input
                             type="search"
                             id="search"
@@ -41,13 +45,23 @@
                             placeholder="rechercher"
                             class="search-text"
                         />
+                        <button type="" class="submit-search">rechercher</button>
                     </form>
-                    <button type="submit" class="submit-search"></button>
                 </li>
-                <li class="nav-link"><a href=""></a></li>
-                <li class="nav-link"><a href=""></a></li>
-                <li class="nav-link"><a href=""></a></li>
-                <li class="nav-link"><a href=""></a></li>
+                <!--search end-->
+
+                <li class="nav-link">
+                    <a href="">Visits</a>
+                </li>
+                <li class="nav-link">
+                    <a href="">Contact</a>
+                </li>
+                <li class="nav-link">
+                    <a href="">History</a>
+                </li>
+                <li class="nav-link">
+                    <a href="">GetTickets</a>
+                </li>
             </ul>
         </nav>
         <!--menu principal fin-->
@@ -55,25 +69,30 @@
         <!--header texte-->
         <section class="main-descr">
             <!--<a href="" class="logo"><img src="" alt=""></a> retiré mais à mettre dans footer-->
-            <h2 class="date"></h2>
-            <p class="header-txt"></p>
-            <a href="" class="CTA"></a>
+            <h2 class="date">
+                August</br>
+                <strong>22 > 27</strong>
+            </h2>
+            <h3 class="header-txt">The ultimate competition dedicated for any manuals and technologicals skills, loves and works just for fun, for their work or just exchanging their passion with others…</p>
+            <a href="" class="CTA">See Schedule</a>
         </section>
         <!--header texte fin-->
     </header>
 
     <main>
-        <ul class="light-bg post-wrapper">
+        <ul class="light-bg activities">
 
-            <!--fiche d'activité-->
+            <h2 class="CTA title activities">Que faire à Kazan ?</h2>
+
+            <!--activity start-->
             <li class="activity">
 
                 <!--more button-->
-                <span class="more">
+                <a href="" class="more">
                     <span></span>
                     <span></span>
                     <span></span>
-                </span>
+                </a>
 
                 <h2 class="lieu"><bold></bold><br/></h2>
                 <h3 class="location center"></h3>
@@ -89,27 +108,30 @@
                     </li>
                 </ul>
             </li>
+            <!--activity end-->
         </ul>
     </main>
     <footer>
-        <h2 class="CTA title"></h2>
+        <h2 class="CTA title">GET TICKET</h2>
         <div class="pay-info">
             <ul class="pay-buttons">
-                <li>
-                    <span class="pay-choice"></span>
+                <li class="pay-choice">
+                    <h2 class="pay-choice-title">Carte de crédit</h2>
+                    <!--fontawesome carte de crédit-->
                 </li>
-                <li>
-                    <span class="pay-choice"></span>
+                <li class="pay-choice">
+                    <h2 class="pay-choice-title">Paypal</h2>
+                    <!--fontawesome paypal-->
                 </li>
             </ul>
-            <div class="price"><bold></bold></div>
+            <div class="price"><strong>₽2600</strong>RUR</div>
         </div>
         <section class="info-footer"><!--position relative-->
             <!--::before background location icone position absolute-->
-            <h2></h2>
+            <h2>TatarStan Toursim</h2>
             <div class="resume">
-                <h2></h2>
-                <p></p>
+                <h2 class="address">Ulitsa Maksima Gor'kogo, 19, Kazan, 420015</h2>
+                <p>Kazan (en russe, Казань ; en tatar : Казан) est une ville de Russie et la capitale de la république du Tatarstan, une des subdivisions de la Russie. Sa population s'élevait à 1 231 878 habitants en 2017 ce qui en fait la sixième ville de Russie.</p>
             </div>
         </section>
         <ul class="contact">
@@ -123,11 +145,11 @@
             <h2>Follow US</h2>
             <li>
                 <span class="media 1"></span>
-                <h2 class="tag-media"></h2>
+                <h2 class="tag-media">#kazan2019</h2>
             </li>
             <li>
                 <span class="media 2"></span>
-                <h2 class="tag-media"></h2>
+                <h2 class="tag-media">@kazan2019</h2>
             </li>
         </ul>
         <ul class="backlin-list">
