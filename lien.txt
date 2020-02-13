@@ -10,3 +10,5 @@ https://git-scm.com/download/win
 http://lr-et-lo.be/git/
 
 https://git-scm.com/docs/git-remote
+
+https://pierrej0312:Failure70@github.com/pierrej0312/ei-pierre.git
