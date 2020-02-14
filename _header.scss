@@ -2,7 +2,7 @@
 @import 'nav';
 @import 'search';
 header {
-    position: static;
+    position: relative;
     width: 100vw;
     height: 600px;
     background: url(/img/bg/header.jpg);
@@ -10,6 +10,8 @@ header {
     background-position: center;
     padding:0;
     margin:0;
+    top:0;
+    left:0;
 }
  .menu-nav {
      top:0;
