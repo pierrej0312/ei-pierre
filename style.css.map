@@ -4,7 +4,10 @@
     "sources": [
         "style.scss",
         "_font.scss",
-        "_moveRules.scss"
+        "_moveRules.scss",
+        "_header.scss",
+        "_nav.scss",
+        "_search.scss"
     ],
     "names": [],
     "file": "style.css"

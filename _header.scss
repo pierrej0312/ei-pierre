@@ -1,0 +1,38 @@
+@import 'nav';
+@import 'search';
+
+<!--Hamburger-->
+        <div class="ham-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+.ham-button {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 9999;
+}
+.ham-button:nth-child(1),
+.ham-button:nth-child(2),
+.ham-button:nth-child(3) {
+    position: absolute;
+    height: 4px;
+    background-color: $CTA-color;
+    right:0;
+    transform-origin: center;
+}
+.ham-button:nth-child(1) {
+    width: 80%;
+    top:0;
+}
+.ham-button:nth-child(2) {
+    width: 100%;
+    top:50%;
+    transform: translateY(-50%);
+}
+.ham-button:nth-child(3) {
+    width: 50%;
+    bottom: 0;
+}
