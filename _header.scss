@@ -59,9 +59,20 @@ header {
      display: flex;
      flex-direction: column;
      justify-content: center;
+     color: $CTA-color;
+     font-family: Montserrat;
+     font-weight: 400;
+     font-size: 30px;
+     margin-bottom: 50px;
  }
  .date strong {
      display: block;
+     font-family: Montserrat;
+     font-weight: 400;
+     font-size: 60px;
+     margin-top: 20px;
+     margin-bottom:20px;
+     order: -1;
  }
  .header-txt {
      display:none;
@@ -72,4 +83,7 @@ header {
      color: white;
      background-color: $CTA-color;
      margin-bottom: 50px;
+     font-family: Montserrat;
+     font-weight: 600;
+     font-size: 15px;
  }
