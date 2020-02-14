@@ -1,9 +1,176 @@
-.search form {
+@font-face {
+    font-family: 'codeconf';
+    src: url('/font/icon/codeconf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+.search {
+    max-height: 30px;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+}
+.search.active::after{
+    content:'';
+    display:block;
+    position: fixed;
+    width:0vw;
+    height:0vh;
+    left:100vw;
+    top:70vh;
+    border-radius: 100%;
+    background-color:$txt-pink-color;
+    z-index: 1;
+    animation-name: anim-search-mask;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes anim-search-mask {
+    0% {
+        width:0vw;
+        height:0vh;
+        left:95vw;
+        top:75vh;
+        border-radius: 100%;
+    }
+    100% {
+        width: 100vw;
+        height: 100vh;
+        top:0;
+        left:0;
+        border-radius: 0%;
+    }
+}
+.search.active::before{
+    content:'';
+    display:block;
+    width:0%;
+    height:0%;
+    border:none;
+    position: absolute;
+    top:0;
+    left:100%;
+    border-radius:100%;
+    background-color:white;
+    z-index: 40;
+    animation-name: anim-search-form;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+    animation-timing-function: cubic-bezier(.65,.27,.56,1.55);
+}
+@keyframes anim-search-form {
+    0%{
+        width:0%;
+        height:0%;
+        top:50%;
+        left:100%;
+        border-radius:50px;
+    }
+    100%{
+        width:100%;
+        height:100%;
+        top:0%;
+        left:0%;
+        border-radius:0px;
+    }
+}
+.search-form {
+    display:block;
+    opacity:0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 300ms ease-in-out;
+    position: relative;
+    z-index:55;
+}
+.search-form.active {
+    
+    opacity:1;
+    transform: scaleX(1);
+    
+}
+.search-form label {
     display:none;
+}
+.submit-search {
+    background: black;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right:-130px;
+}
+.close-search {
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top:-2px;
+    left: 0;
+    width: 30px;
+    height:30px;
+    background: none;
+    margin: 0;
+    padding:0;
+}
+.close-search div {
+    position: absolute;
+    top: -150vh;
+}
+.close-search::before,
+.close-search::after {
+    content:'';
+    display:block;
+    width: 30px;
+    height: 4px;
+    background: $txt-cta-bg;
+    transform-origin: center, center;
+}
+.close-search::before {
+    transform: rotate(45deg) translate(40%, -100%);
+}
+.close-search::after {
+    transform: rotate(-45deg) translate(-40%, -100%);
+}
+.search-form input {
+    margin-left: 50px;
+    outline: none;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 15px;
+    background: none;
 }
 .search-button {
     display: block;
     width: 30px;
     height:30px;
-    background: black;
+    position: relative;
+    order:1;
+    z-index:50;
+}
+.search-button::before {
+    content: "\e901";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-family: 'codeconf';
+    speak: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $txt-cta-bg;
 }
