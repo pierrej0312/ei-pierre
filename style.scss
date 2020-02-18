@@ -18,7 +18,10 @@ $north-color: #FF7D9E;
 $south-color: $CTA-color;
 $east-color: #284e68;
 $west-color: $bg-pink-color;
-$bg-filter:linear-gradient(0deg, rgba(244, 152, 179, 0.176) 3.2%, rgba(0, 216, 255, 0.09) 51.85%, rgba(40, 51, 59, 0) 96.4%);;
+$bg-filter:linear-gradient(0deg, rgba(244, 152, 179, 0.176) 3.2%, rgba(0, 216, 255, 0.09) 51.85%, rgba(40, 51, 59, 0) 96.4%);
+$dark-filter: linear-gradient(359.97deg, rgba(244, 152, 179, 0.176) 3.24%, rgba(0, 216, 255, 0.09) 65.36%, rgba(40, 51, 59, 0) 122.24%);
+$title-footer-height: 70px;
+$footer-txt-color: #323F49;
 
 body {
     width: 100vw;
