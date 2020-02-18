@@ -132,3 +132,31 @@
     font-weight: 300;//regular
     src: url('/font/Museo300-Regular.otf') format('opentype');
   }
+
+  //icons
+
+  @font-face {
+    font-family: 'codeconf';
+    src: url('/font/icon/codeconf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Font Awesome 5 Free - brands';
+    src: url('/font/icon/fa-brands-400.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Font Awesome 5 Free - regular';
+    src: url('/font/icon/fa-regular-400.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Font Awesome 5 Free - solid';
+    src: url('/font/icon/fa-solid-900.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }

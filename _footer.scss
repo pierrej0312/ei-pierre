@@ -1,0 +1,13 @@
+footer {
+    background:  black, url(img/bg/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 200px;
+    width: 100vw;
+    min-height: 200px;
+}
+.CTA.footer-title {
+    padding: 30px 10px;
+    color: white;
+    background: $CTA-color;
+}

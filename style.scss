@@ -1,20 +1,27 @@
 @import 'font';
 @import 'moveRules';
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css);
 
 //color variants
 $CTA-color:#00D8FF;
 $txt-cta-bg: #284e68;
 $txt-basic-clr: rgb(115,123,128);
 $txt-color-light-grey:#D6D6D6;
+$bg-post: #F8F8F8;
 $txt-secondary-color:#d4ce9a;
 $txt-tertiary-color:#f899b4;
 $txt-pink-color:#F297B1;
 $bg-dark-color:#31424D;
 $bg-pink-color:#D35B7E;
+$center-color: #EBE3A6;
+$north-color: #FF7D9E;
+$south-color: $CTA-color;
+$east-color: #284e68;
+$west-color: $bg-pink-color;
 $bg-filter:linear-gradient(0deg, rgba(244, 152, 179, 0.176) 3.2%, rgba(0, 216, 255, 0.09) 51.85%, rgba(40, 51, 59, 0) 96.4%);;
 
 body {
-    max-width: 100vw;
+    width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
     font-family: Montserrat;
@@ -26,3 +33,5 @@ body {
 }
 
 @import 'header';
+@import 'main';
+@import 'footer';

@@ -1,3 +1,4 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css);
 @font-face {
   font-family: 'MavenPro';
   font-weight: 900;
@@ -157,6 +158,34 @@
   src: url("/font/Museo300-Regular.otf") format("opentype");
 }
 
+@font-face {
+  font-family: 'codeconf';
+  src: url("/font/icon/codeconf.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free - brands';
+  src: url("/font/icon/fa-brands-400.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free - regular';
+  src: url("/font/icon/fa-regular-400.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free - solid';
+  src: url("/font/icon/fa-solid-900.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 ul {
   list-style: none;
 }
@@ -231,8 +260,17 @@ a {
   padding: 0;
 }
 
-body {
+img {
   max-width: 100vw;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
   font-family: Montserrat;
@@ -370,13 +408,6 @@ body {
   font-weight: 850;
   font-size: 24px;
   color: #284e68;
-}
-
-@font-face {
-  font-family: 'codeconf';
-  src: url("/font/icon/codeconf.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 
 .search {
@@ -755,5 +786,353 @@ header {
   font-family: Montserrat;
   font-weight: 600;
   font-size: 15px;
+}
+
+.CTA.title {
+  color: #00D8FF;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-weight: 850;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 27px;
+}
+
+ul.activities {
+  display: -ms-grid;
+  display: grid;
+  grid: row 1fr / auto;
+  justify-items: end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -ms-flex-line-pack: start;
+      align-content: start;
+}
+
+.activity {
+  width: 70vw;
+  min-height: 80px;
+  background: #F8F8F8;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  padding-right: 85px;
+  padding: 30px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.activity.active {
+  background: #31424D;
+}
+
+.more {
+  min-width: 25px;
+  min-height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.more.active {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 70px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.more.active :nth-child(1) {
+  display: none;
+}
+
+.more :nth-child(1),
+.more :nth-child(2),
+.more :nth-child(3) {
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background: #737b80;
+  margin: 2px;
+}
+
+.activity figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.activity-img {
+  min-width: 250px;
+  min-height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 10px;
+  display: none;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-left: -100vw;
+}
+
+.activity-img.active {
+  display: block;
+  margin-left: -100vw;
+  -webkit-animation-name: anim-activity-img;
+          animation-name: anim-activity-img;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-timing-function: cubic-bezier(0.65, 0.27, 0.56, 1.55);
+          animation-timing-function: cubic-bezier(0.65, 0.27, 0.56, 1.55);
+}
+
+@-webkit-keyframes anim-activity-img {
+  0% {
+    margin-left: -100vw;
+  }
+  100% {
+    margin-left: 0vw;
+  }
+}
+
+@keyframes anim-activity-img {
+  0% {
+    margin-left: -100vw;
+  }
+  100% {
+    margin-left: 0vw;
+  }
+}
+
+.lieu {
+  color: #737b80;
+  font-family: Museo;
+  font-weight: 500;
+  font-size: 27px;
+  margin-bottom: 10px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.lieu.active {
+  color: white;
+}
+
+.lieu strong {
+  display: block;
+  font-family: Montserrat;
+  font-weight: 900;
+}
+
+.location {
+  font-weight: 400;
+  font-size: 18px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.center {
+  color: #EBE3A6;
+}
+
+.north {
+  color: #FF7D9E;
+}
+
+.east {
+  color: #284e68;
+}
+
+.south {
+  color: #00D8FF;
+}
+
+.west {
+  color: #D35B7E;
+}
+
+.location.active {
+  position: absolute;
+  top: 94px;
+}
+
+.lieu.active {
+  margin-bottom: 38px;
+}
+
+.activity-content {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-content.active {
+  display: block;
+  opacity: 0;
+  -webkit-animation-name: anim-activity;
+          animation-name: anim-activity;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.65, 0.27, 0.56, 1.55);
+          animation-timing-function: cubic-bezier(0.65, 0.27, 0.56, 1.55);
+}
+
+@-webkit-keyframes anim-activity {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes anim-activity {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.activity-content h3 {
+  font-size: 15px;
+}
+
+.activity-descr {
+  color: white;
+}
+
+.activity-buttons {
+  margin-top: 10px;
+  width: 80%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.activity-buttons::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 100%;
+  width: 2px;
+  background: white;
+}
+
+.like {
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.like::after {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  font-size: 30px;
+  display: block;
+  color: #EBE3A6;
+}
+
+.like.active::after {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+  display: block;
+  color: #EBE3A6;
+}
+
+.read-more {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 17px;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

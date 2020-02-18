@@ -14,3 +14,6 @@ https://git-scm.com/docs/git-remote
 https://pierrej0312:Failure70@github.com/pierrej0312/ei-pierre.git
 
 https://trello.com/b/gbhhPzrX/exercice-final-pierre
+
+css grid
+https://la-cascade.io/css-grid-layout-guide-complet/#gtc
