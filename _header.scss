@@ -33,6 +33,9 @@ header {
      position: relative;
      margin: 20px;
  }
+.main-logo.active {
+    position: fixed;
+}
  .main-logo h1 {
      position: absolute;
      bottom: 150vh;

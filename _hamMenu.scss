@@ -6,6 +6,12 @@
     z-index: 9999;
     margin:30px;
 }
+.ham-button.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
 .ham-button :nth-child(1),
 .ham-button :nth-child(2),
 .ham-button :nth-child(3) {

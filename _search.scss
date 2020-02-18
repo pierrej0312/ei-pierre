@@ -86,7 +86,7 @@
     position: relative;
     z-index:55;
 }
-.search-form.active {
+.search.active .search-form {
     
     opacity:1;
     transform: scaleX(1);

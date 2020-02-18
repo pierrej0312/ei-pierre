@@ -12,10 +12,11 @@
 ul.activities {
     display: grid;
     grid: row 1fr / auto; 
-    justify-items: end;
+    justify-items: center;
     align-items: start;
     justify-content: stretch;
     align-content: start;
+    padding: 0;
 }
 .activity {
     width: 70vw;
@@ -47,12 +48,12 @@ ul.activities {
     transform: translateY(-50%);
     transition: all 300ms ease-in-out;
 }
-.more.active {
+.activity.active .more {
     flex-direction: column;
     top: 70px;
     transform: translateY(0);
 }
-.more.active :nth-child(1) {
+.activity.active .more :nth-child(1) {
     display:none;
 }
 .more :nth-child(1),
@@ -65,20 +66,21 @@ ul.activities {
     margin: 2px;
 }
 .activity figure {
+    width: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 .activity-img {
-    min-width:250px;
-    min-height:250px;
+    width:100%;
+    height:270px;
     object-fit: cover;
     margin-bottom: 10px;
     display:none;
     order:1;
     margin-left: -100vw;
 }
-.activity-img.active {
+.activity.active .activity-img {
     display: block;
     margin-left: -100vw;
     animation-name: anim-activity-img;
@@ -104,7 +106,7 @@ ul.activities {
     margin-bottom: 10px;
     transition: all 300ms ease-in-out;
 }
-.lieu.active {
+.activity.active .lieu {
     color: white;
 }
 .lieu strong {
@@ -132,11 +134,11 @@ ul.activities {
 .west {
     color: $west-color;
 }
-.location.active {
+.activity.active .location {
     position:absolute;
     top: 94px;
 }
-.lieu.active {
+.activity.active .lieu {
     margin-bottom: 38px;
 }
 .activity-content {
@@ -144,7 +146,7 @@ ul.activities {
     padding:0;
     margin:0;
 }
-.activity-content.active {
+.activity.active .activity-content {
     display: block;
     opacity: 0;
     animation-name: anim-activity;
