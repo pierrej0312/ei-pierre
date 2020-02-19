@@ -12,28 +12,36 @@
     justify-content: flex-end;
     z-index: 8000;
     transition: all 300ms ease-in-out;
+
+    .main-nav-list {
+        margin:0;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+    
+        @import 'search';
+
+        .nav-link {
+            margin:0;
+            padding:0;
+            margin-top: 20px;
+
+            a {
+                font-family: 'Montserrat';
+                font-weight: 850;
+                font-size: 24px;
+                color: $txt-cta-bg;
+            }
+        }
+    }
 }
 .main-nav.active {
     left:0;
 }
-.main-nav-list {
-    margin:0;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-.nav-link {
-    margin:0;
-    padding:0;
-    margin-top: 20px;
-}
-.nav-link a {
-    font-family: 'Montserrat';
-    font-weight: 850;
-    font-size: 24px;
-    color: $txt-cta-bg;
-}
+
+
+
 
 

@@ -9,7 +9,7 @@
     margin-bottom: 30px;
     font-size: 27px;
 }
-ul.activities {
+.activities {
     display: grid;
     grid: row 1fr / auto; 
     justify-items: center;
@@ -17,108 +17,197 @@ ul.activities {
     justify-content: stretch;
     align-content: start;
     padding: 0;
-}
-.activity {
-    width: 70vw;
-    min-height: 80px;
-    background: $bg-post;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
-    padding-right: 85px;
-    padding: 30px;
-    transition: all 300ms ease-in-out;
-}
-.activity.active {
-    background: $bg-dark-color;
-}
-.more {
-    min-width: 25px;
-    min-height: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right:30px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 300ms ease-in-out;
-}
-.activity.active .more {
-    flex-direction: column;
-    top: 70px;
-    transform: translateY(0);
-}
-.activity.active .more :nth-child(1) {
-    display:none;
-}
-.more :nth-child(1),
-.more :nth-child(2),
-.more :nth-child(3) {
-    width: 6px;
-    height: 6px;
-    border-radius: 100%;
-    background: $txt-basic-clr;
-    margin: 2px;
-}
-.activity figure {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-.activity-img {
-    width:100%;
-    height:270px;
-    object-fit: cover;
-    margin-bottom: 10px;
-    display:none;
-    order:1;
-    margin-left: -100vw;
-}
-.activity.active .activity-img {
-    display: block;
-    margin-left: -100vw;
-    animation-name: anim-activity-img;
-    animation-duration: 0.3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 0.3s;
-    animation-timing-function: cubic-bezier(.65,.27,.56,1.55);
-}
-@keyframes anim-activity-img {
-    0% {
-        margin-left: -100vw;
+
+    .activity {
+        width: 70vw;
+        min-height: 80px;
+        background: $bg-post;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        padding-right: 85px;
+        padding: 30px;
+        transition: all 300ms ease-in-out;
+
+        .more {
+            min-width: 25px;
+            min-height: 25px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right:30px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 300ms ease-in-out;
+
+            :nth-child(1),
+            :nth-child(2),
+            :nth-child(3) {
+                width: 6px;
+                height: 6px;
+                border-radius: 100%;
+                background: $txt-basic-clr;
+                margin: 2px;
+            }
+        }
+        figure {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+
+            .activity-img {
+                width:100%;
+                height:270px;
+                object-fit: cover;
+                margin-bottom: 10px;
+                display:none;
+                order:1;
+                margin-left: -100vw;
+            }
+            .lieu {
+                color: $txt-basic-clr;
+                font-family: Museo;
+                font-weight: 500;
+                font-size: 27px;
+                margin-bottom: 10px;
+                transition: all 300ms ease-in-out;
+
+                strong {
+                    display:block;
+                    font-family: Montserrat;
+                    font-weight: 900;
+                }
+            }
+        }
+        .location {
+            font-weight: 400;
+            font-size: 18px;
+            transition: all 300ms ease-in-out;
+        }
+        .activity-content {
+            display: none;
+            padding:0;
+            margin:0;
+
+            h3 {
+                font-size: 15px;
+            }
+            .activity-descr {
+                color: white;
+            }
+            .activity-buttons {
+                margin-top: 10px;
+                width: 80%;
+                height: 40px;
+                display: flex;
+                position: relative;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .like {
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .like::after {
+                    content: "\f004";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 400;
+                    font-size: 30px;
+                    display: block;
+                    color: $center-color;
+                    transition: all 300ms cubic-bezier(.65,.27,.56,1.55);
+                }
+                .like.active::after {
+                    content: "\f004";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 400;
+                    font-size: 30px;
+                    display: block;
+                    color: $center-color;
+                    animation-name: likeanim;
+                    animation-duration: 0.3s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                    animation-delay: 0.3s;
+                    animation-timing-function: ease-in-out;
+                }
+                .read-more {
+                    font-family: Montserrat;
+                    font-weight: 500;
+                    font-size: 17px;
+                    color: white;
+                }
+                
+            }
+            .activity-buttons::after {
+                content:'';
+                display: block;
+                position: absolute;
+                top:0;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 100%;
+                width: 2px;
+                background: white;
+            }
+        }
     }
-    100% {
-        margin-left: 0vw;
+
+    .activity.active {
+        background: $bg-dark-color;
+
+        .more {
+            flex-direction: column;
+            top: 70px;
+            transform: translateY(0);
+
+            :nth-child(1) {
+                display:none;
+            }
+        }
+        .activity-img {
+            display: block;
+            margin-top: 40px;
+            margin-left: -100vw;
+            animation-name: anim-activity-img;
+            animation-duration: 0.3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: 0.3s;
+            animation-timing-function: cubic-bezier(.65,.27,.56,1.55);
+        }
+        .lieu {
+            color: white;
+        }
+        .location {
+            position:absolute;
+            top: 94px;
+        }
+        .activity-content {
+            display: block;
+            opacity: 0;
+            animation-name: anim-activity;
+            animation-duration: 0.3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: 0.5s;
+            animation-timing-function: cubic-bezier(.65,.27,.56,1.55);
+        }
     }
 }
-.lieu {
-    color: $txt-basic-clr;
-    font-family: Museo;
-    font-weight: 500;
-    font-size: 27px;
-    margin-bottom: 10px;
-    transition: all 300ms ease-in-out;
-}
-.activity.active .lieu {
-    color: white;
-}
-.lieu strong {
-    display:block;
-    font-family: Montserrat;
-    font-weight: 900;
-}
-.location {
-    font-weight: 400;
-    font-size: 18px;
-    transition: all 300ms ease-in-out;
-}
+
+
+
 .center {
     color: $center-color;
 }
@@ -134,94 +223,17 @@ ul.activities {
 .west {
     color: $west-color;
 }
-.activity.active .location {
-    position:absolute;
-    top: 94px;
-}
-.activity.active .lieu {
-    margin-bottom: 38px;
-}
-.activity-content {
-    display: none;
-    padding:0;
-    margin:0;
-}
-.activity.active .activity-content {
-    display: block;
-    opacity: 0;
-    animation-name: anim-activity;
-    animation-duration: 0.3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 0.5s;
-    animation-timing-function: cubic-bezier(.65,.27,.56,1.55);
-}
-@keyframes anim-activity {
+
+
+
+
+@keyframes anim-activity-img {
     0% {
-        opacity:0;
-        transform: scale(0);
+        margin-left: -100vw;
     }
     100% {
-        opacity:1;
-        transform: scale(1);
+        margin-left: 0vw;
     }
-}
-.activity-content h3 {
-    font-size: 15px;
-}
-.activity-descr {
-    color: white;
-}
-.activity-buttons {
-    margin-top: 10px;
-    width: 80%;
-    height: 40px;
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.activity-buttons::after {
-    content:'';
-    display: block;
-    position: absolute;
-    top:0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: 2px;
-    background: white;
-}
-.like {
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.like::after {
-    content: "\f004";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 400;
-    font-size: 30px;
-    display: block;
-    color: $center-color;
-    transition: all 300ms cubic-bezier(.65,.27,.56,1.55);
-}
-.like.active::after {
-    content: "\f004";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 400;
-    font-size: 30px;
-    display: block;
-    color: $center-color;
-    animation-name: likeanim;
-    animation-duration: 0.3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 0.3s;
-    animation-timing-function: ease-in-out;
 }
 @keyframes likeanim {
     0% {
@@ -237,9 +249,13 @@ ul.activities {
         font-size: 30px;
     }
 }
-.read-more {
-    font-family: Montserrat;
-    font-weight: 500;
-    font-size: 17px;
-    color: white;
+@keyframes anim-activity {
+    0% {
+        opacity:0;
+        transform: scale(0);
+    }
+    100% {
+        opacity:1;
+        transform: scale(1);
+    }
 }

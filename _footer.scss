@@ -12,251 +12,277 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-}
-.CTA.footer-title {
-    color: $bg-dark-color;
-    background: $CTA-color;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: $title-footer-height;
-    width: calc(100vw - 100px);
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    box-shadow: 0px 0px 10px #AAAAAA;
-    font-size: 20px;
-    font-weight: 700;
-}
 
-.ticket-info {
-    width: calc(100vw - 120px);
-    min-height: 50px;
-    padding-left:10px;
-    padding-right: 10px;
-    background: $footer-txt-color;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 0px 10px #AAAAAA;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-.pay-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100px;
-    height: 40px;
-    color: $txt-basic-clr;
-    padding: 0;
-    margin: 0;
-}
-.pay-choice {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    overflow: hidden;
-}
-.credit-card::after {
-    content:'\e905';
-    display: block;
-    font-family: 'codeconf';
-    font-size: 25px;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.paypal::after {
-    content:'\e906';
-    display: block;
-    font-family: 'codeconf';
-    font-size: 25px;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.pay-choice-title {
-    position: absolute;
-    top: -100vh;
-}
-.price {
-    color: $CTA-color;
-    font-size: 20px;
-    font-weight: 500;
-}
-.price strong {
-    color: white;
-    margin-right: 5px;
-}
-.pay-info {
-    margin-bottom: 50px;
-}
-.info-footer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.info-footer > h2 {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    color: white;
-    margin-bottom: 20px;
-}
-.info-footer > h2::after {
-    content: "";
-    display: block;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url(/icons/pin.svg);
-}
-.resume {
-    margin-bottom: 30px;
-}
-.address {
-    color: white;
-    font-size: 14px;
-}
-.resume p {
-    color: white;
-}
-.contact {
-    margin-bottom: 30px;
-}
-.contact > h2 {
-    color: white;
-    font-size: 13px;
-}
-.contact ul {
-    padding: 0;
-    margin: 0;
-}
-.type-contact {
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-}
-.contact-descr {
-    color: white;
-    font-weight: 600;
-    font-size: 17px;
-}
-.social-media {
-    background: white;
-    min-width: calc(100vw - 160px);
-    padding: 30px;
-    min-height: 80px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    position: relative;
-}
-.social-media > h2 {
-    color: $CTA-color;
-    font-size: 17px;
-}
-.social-media ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.media {
-    margin: 0;
-    padding: 0;
-    padding-left: 50px;
-    position: relative;
-    min-width: 50px;
-    margin-bottom: 15px;
-}
-.tag-media {
-    color: $footer-txt-color;
-    font-size: 15px;
-}
-.media-1::after {
-    content: '\e90b';
-    display: block;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-size: 30px;
-    color: $footer-txt-color;
-    font-family: 'codeconf';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: absolute;
-    left:0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.media-2::after {
-    content: '\e90d';
-    display: block;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-size: 30px;
-    color: $footer-txt-color;
-    font-family: 'codeconf';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: absolute;
-    left:0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.backlin-list {
-    padding: 0;
-    margin:0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-.backlin-list li {
-    display: flex;
-    width: calc(100vw - 100px);
-    align-items: center;
-    justify-content: center;
-}
-.backlin-list li img {
-    width: 120px;
+    .pay-info {
+        margin-bottom: 50px;
+
+        .CTA.footer-title {
+            color: $bg-dark-color;
+            background: $CTA-color;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: $title-footer-height;
+            width: calc(100vw - 100px);
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            box-shadow: 0px 0px 10px #AAAAAA;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .ticket-info {
+            width: calc(100vw - 120px);
+            min-height: 50px;
+            padding-left:10px;
+            padding-right: 10px;
+            background: $footer-txt-color;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 0px 10px #AAAAAA;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            .pay-buttons {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100px;
+                height: 40px;
+                color: $txt-basic-clr;
+                padding: 0;
+                margin: 0;
+
+                .pay-choice {
+                    width: 40px;
+                    height: 40px;
+                    position: relative;
+                    overflow: hidden;
+                }
+                .credit-card::after {
+                    content:'\e905';
+                    display: block;
+                    font-family: 'codeconf';
+                    font-size: 25px;
+                    speak: none;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .paypal::after {
+                    content:'\e906';
+                    display: block;
+                    font-family: 'codeconf';
+                    font-size: 25px;
+                    speak: none;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .pay-choice-title {
+                    position: absolute;
+                    top: -100vh;
+                }
+            }
+
+            .price {
+                color: $CTA-color;
+                font-size: 20px;
+                font-weight: 500;
+        
+                strong {
+                    color: white;
+                    margin-right: 5px;
+                }
+            }
+        }    
+    }
+    
+    
+    .info-footer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        > h2 {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        > h2::after {
+            content: "";
+            display: block;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(/icons/pin.svg);
+        }
+    }
+
+    .resume {
+        margin-bottom: 30px;
+
+        .address {
+            color: white;
+            font-size: 14px;
+        }
+
+        p {
+            color: white;
+        }
+    }
+    
+    
+    .contact {
+        margin-bottom: 30px;
+
+        > h2 {
+            color: white;
+            font-size: 13px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+
+            .type-contact {
+                color: white;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            .contact-descr {
+                color: white;
+                font-weight: 600;
+                font-size: 17px;
+            }
+        }
+    } 
+    .social-media {
+        background: white;
+        min-width: calc(100vw - 160px);
+        padding: 30px;
+        min-height: 80px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        position: relative;
+
+        > h2 {
+            color: $CTA-color;
+            font-size: 17px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .media {
+                margin: 0;
+                padding: 0;
+                padding-left: 50px;
+                position: relative;
+                min-width: 50px;
+                margin-bottom: 15px;
+
+                .tag-media {
+                    color: $footer-txt-color;
+                    font-size: 15px;
+                }
+            }
+
+            .media-1::after {
+                content: '\e90b';
+                display: block;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                font-size: 30px;
+                color: $footer-txt-color;
+                font-family: 'codeconf';
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                position: absolute;
+                left:0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .media-2::after {
+                content: '\e90d';
+                display: block;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                font-size: 30px;
+                color: $footer-txt-color;
+                font-family: 'codeconf';
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                position: absolute;
+                left:0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .backlin-list {
+        padding: 0;
+        margin:0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        li {
+            display: flex;
+            width: calc(100vw - 100px);
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 120px;
+            }
+        }
+    }
 }
