@@ -64,7 +64,7 @@ input.forEach(element => {
 
     element.addEventListener("keyup", function() {
         console.log(element.value.length)
-        if(element.value.length > 0){
+        if(element.forEach.value.length > 0){
             submitButton.classList.add("active");
         }
         else{
@@ -100,7 +100,7 @@ input.forEach(element => {
 });
 
 //submit enable
-// let submitButton = document.querySelector(".send-button");
+let submitButton = document.querySelector(".send-button");
 
 // element.addEventListener("keyup", function() {
 //     console.log(element)
