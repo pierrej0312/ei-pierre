@@ -34,7 +34,7 @@ activity.forEach(element => {
         console.log(this);
        if(document.querySelector(".activity.active")) document.querySelector(".activity.active").classList.remove("active")
         this.classList.add("active");
-        
+
         //scroll view se positionne sur activity top
         console.log(this.offsetTop);
         document.documentElement.scrollTop = this.offsetTop;
@@ -53,3 +53,40 @@ ev.addEventListener("click", function() {
     this.classList.toggle("active");
 });
 });
+
+//formulaire
+let input = document.querySelectorAll(".input-contact");
+let textarea = document.querySelectorAll(".textarea-contact");
+
+input.forEach(element => {
+
+    element.addEventListener("mouseout", function(){
+        console.log(element.previousElementSibling)
+        if(element.value == ""){
+            element.previousElementSibling.classList.remove("texted")
+        }
+    })
+
+
+    element.addEventListener("mouseenter", function() {
+        console.log(element.previousElementSibling)
+        element.previousElementSibling.classList.add("texted")
+    })
+   element.addEventListener("change", function() {
+        if(element.value == ""){
+            element.classList.remove("texted")
+            element.previousElementSibling.classList.remove("texted")
+        }
+        else {
+            element.classList.add("texted")
+        }
+   }); 
+});
+textarea.forEach(element => {
+    element.addEventListener("change", function() {
+         if(element.value == ""){element.classList.remove("texted")}
+         else {
+             element.classList.add("texted")
+         }
+    }); 
+ });

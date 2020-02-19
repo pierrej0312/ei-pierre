@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" />
+    <meta name="name" content="Kazan - The ultimate competition of WorldSkills"/>
+    <meta name="description" content="The ultimate competition dedicated for any manuals and technologicals skills, loves and works just for fun, for their work or just exchanging their passion with others…"/>
+    <title>Acceuil - World skills Kazan 2019 - Kazan Smartcity - Activités Kazan</title>
+</head>
+<body>
+    <header>
+        <div class="menu-nav">
+        <!--logo principal-->
+        <a href="index.html" class="main-logo"><!--position relative-->
+            <h1>Kazan - The ultimate competition of WorldSkills - Compétition World Skills</h1><!--masquer-->
+            <img src="/img/logo/logo_kazan.png" alt="logo Kazan Smartcity">
+        </a>
+
+        <!--Hamburger-->
+        <div class="ham-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </div>
+        <!--Hamburger fin-->
+
+        <!--menu principal-->
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+
+                <!--search start-->
+                <li class="search">
+                    <span class="search-button"></span>
+                    <form method="get" class="search-form">
+                        <label for="search">Entrez votre recherche</label>
+                        <input
+                            type="search"
+                            id="search"
+                            name="q"
+                            aria-label="rechercher"
+                            placeholder="Entrez votre recherche"
+                            class="search-text"
+                        />
+                        <button class="submit-search">rechercher</button>
+                        <div class="close-search"><div>annuler</div></div>
+                    </form>
+                </li>
+                <!--search end-->
+
+                <li class="nav-link">
+                    <a href="">Visits</a>
+                </li>
+                <li class="nav-link">
+                    <a href="">Contact</a>
+                </li>
+                <li class="nav-link">
+                    <a href="">History</a>
+                </li>
+                <li class="nav-link">
+                    <a href="">GetTickets</a>
+                </li>
+            </ul>
+        </nav>
+        <!--menu principal fin-->
+
+        <!--header texte-->
+        <section class="main-descr">
+            <h2 class="date">
+                August
+                <strong>22 > 27</strong>
+            </h2>
+            <h3 class="header-txt">The ultimate competition dedicated for any manuals and technologicals skills, loves and works just for fun, for their work or just exchanging their passion with others…</h3>
+            <a href="" class="CTA">See Schedule</a>
+        </section>
+        <!--header texte fin-->
+    </header>
+    <fieldset class="contact-us">
+        <h2 class="contact-title">Contact</h2>
+        <h3 class="contact-descr">Besoin d'un contact ?</h3>
+
+        <!--first name-->
+        <label for="firstName" class="required">Prénom</label>
+        <input type="text" name="FirstName" id="firstName" placeholder="John" class="input-contact" required>
+
+        <!--last name-->
+        <label for="lastName" class="required">Nom</label>
+        <input type="text" name="LastName" id="lastName" placeholder="Smith" class="input-contact" required>
+
+        <!--email-->
+        <label for="email" class="required">Email</label>
+        <input type="email" name="email" id="email" placeholder="john.smith@gmail.com" class="input-contact" required>
+
+        <!--object-->
+        <label for="object" class="required">Objet</label>
+        <input type="txt" name="object" id="object" placeholder="L'objet de message" class="input-contact" required>
+
+        <!--message-->
+        <label for="message" class="required message-label">Message</label>
+        <textarea name="message" id="message" cols="40" rows="10" placeholder="Mon message" class="input-contact" required></textarea>
+
+        <button class="send-button" type="submit">Enjoy</button>
+    </fieldset>
+    <script src="animations.js"></script>
+</body>
+</html>
