@@ -15,18 +15,13 @@ let activity = document.querySelectorAll(".activity")
 
 //ouvre search
 search.addEventListener("click", ev => {
-
-    //ouvre search
         search.classList.add("active");
   });
-  //ferme search
-  /*document.querySelector(".main-nav.active").addEventListener("click", ev => {
-      if(document.querySelector(".search.active")) document.querySelector(".search.active").classList.remove("active");
-  });*/
 
-  //ferme search
+
+//ferme search
 document.querySelector(".close-search").addEventListener("click", function(ev) {
-    alert("aie");
+    ev.stopPropagation();
     document.querySelector(".search.active").classList.remove("active");
 });
 hamButton.addEventListener("click", function() {
@@ -39,6 +34,10 @@ activity.forEach(element => {
         console.log(this);
        if(document.querySelector(".activity.active")) document.querySelector(".activity.active").classList.remove("active")
         this.classList.add("active");
+        
+        //scroll view se positionne sur activity top
+        console.log(this.offsetTop);
+        document.documentElement.scrollTop = this.offsetTop;
 });
 });
 
@@ -47,6 +46,10 @@ activity.forEach(element => {
 
 let like = document.querySelectorAll(".like")
 
-like.addEventListener("click", function() {
-    like.classList.add("active");
-})
+like.forEach(ev => {
+ev.addEventListener("click", function() {
+    console.log(this);
+    
+    this.classList.toggle("active");
+});
+});
