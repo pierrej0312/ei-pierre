@@ -56,9 +56,25 @@ ev.addEventListener("click", function() {
 
 //formulaire
 let input = document.querySelectorAll(".input-contact");
-let textarea = document.querySelectorAll(".textarea-contact");
 
 input.forEach(element => {
+
+    let submitButton = document.querySelector(".send-button");
+
+
+    element.addEventListener("keyup", function() {
+        console.log(element.value.length)
+        if(element.value.length > 0){
+            submitButton.classList.add("active");
+        }
+        else{
+            submitButton.classList.remove("active");
+
+        }
+    });
+
+
+
 
     element.addEventListener("mouseout", function(){
         console.log(element.previousElementSibling)
@@ -82,11 +98,12 @@ input.forEach(element => {
         }
    }); 
 });
-textarea.forEach(element => {
-    element.addEventListener("change", function() {
-         if(element.value == ""){element.classList.remove("texted")}
-         else {
-             element.classList.add("texted")
-         }
-    }); 
- });
+
+//submit enable
+// let submitButton = document.querySelector(".send-button");
+
+// element.addEventListener("keyup", function() {
+//     console.log(element)
+//     if(input.string.lenght > 0)submitButton.classList.add("active");
+//     else submitButton.classList.remove("active");
+// });

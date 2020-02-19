@@ -1680,6 +1680,7 @@ footer .backlin-list li img {
   transition: all 300ms ease-in-out;
   overflow: hidden;
   position: relative;
+  outline: none;
 }
 
 .contact-us input:focus {
@@ -1716,7 +1717,12 @@ footer .backlin-list li img {
   z-index: -1;
 }
 
-.contact-us .send-button:hover {
+.contact-us .send-button.active {
+  border: 1px solid white;
+  color: white;
+}
+
+.contact-us .send-button.active:hover {
   border: 1px solid white;
   color: #323F49;
   -webkit-transform: scale(1.1);
@@ -1724,7 +1730,7 @@ footer .backlin-list li img {
   outline: none;
 }
 
-.contact-us .send-button:hover::after {
+.contact-us .send-button.active:hover::after {
   right: 0;
 }
 
