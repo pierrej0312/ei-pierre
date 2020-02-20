@@ -1756,6 +1756,18 @@ footer .backlin-list li img {
   outline: none;
 }
 
+.contact-us .send-button[disabled]:hover {
+  border: 1px solid red;
+  -webkit-box-shadow: 0px 0px 10px red;
+          box-shadow: 0px 0px 10px red;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.contact-us .send-button[disabled]:hover::after {
+  right: 150%;
+}
+
 .contact-us .send-button:hover {
   border: 1px solid white;
   color: #323F49;
