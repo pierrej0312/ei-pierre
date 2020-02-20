@@ -57,14 +57,15 @@ ev.addEventListener("click", function() {
 //formulaire
 let input = document.querySelectorAll(".input-contact");
 
+
 input.forEach(element => {
 
     let submitButton = document.querySelector(".send-button");
 
-
+    // submit active
     element.addEventListener("keyup", function() {
         console.log(element.value.length)
-        if(element.forEach.value.length > 0){
+        if(element.value.length > 0){
             submitButton.classList.add("active");
         }
         else{
@@ -100,10 +101,13 @@ input.forEach(element => {
 });
 
 //submit enable
-let submitButton = document.querySelector(".send-button");
 
-// element.addEventListener("keyup", function() {
-//     console.log(element)
-//     if(input.string.lenght > 0)submitButton.classList.add("active");
-//     else submitButton.classList.remove("active");
-// });
+/*input.forEach(element => {
+    element.addEventListener("keyup", function() {
+        const inputResult = input.value.length;
+        if(input.value.length && input.value.length == false){}
+        if(inputResult && input.value.length == true){console.log(inputResult);}
+        
+    });
+})*/
+

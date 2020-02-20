@@ -1,0 +1,23 @@
+.main-descr.margin {
+    bottom: 30px;
+}
+.contact-us {
+    display:grid;
+    grid: auto / 300px 300px 300px;
+    justify-content: center;
+    align-content: start;
+    justify-items: start;
+    align-items: start;
+    grid-gap: 30px 30px;
+    grid-auto-flow: row;
+    .contact-title {
+        text-align:left;
+    }
+    .contact-descr {
+        text-align:left;
+    }
+
+    input {
+        width:300px;
+    }
+}
