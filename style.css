@@ -1601,6 +1601,21 @@ footer .backlin-list li img {
   color: #00D8FF;
 }
 
+.contact-us form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+}
+
 .contact-us .contact-title {
   text-transform: uppercase;
   font-weight: 850;
@@ -1618,8 +1633,8 @@ footer .backlin-list li img {
 
 .contact-us label {
   font-size: 18px;
-  -webkit-transform: translateY(25px) translateX(10px);
-          transform: translateY(25px) translateX(10px);
+  -webkit-transform: translateY(20px) translateX(10px);
+          transform: translateY(20px) translateX(10px);
   margin-bottom: 5px;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -1630,8 +1645,8 @@ footer .backlin-list li img {
 }
 
 .contact-us .message-label {
-  -webkit-transform: translateY(35px) translateX(10px);
-          transform: translateY(35px) translateX(10px);
+  -webkit-transform: translateY(30px) translateX(10px);
+          transform: translateY(30px) translateX(10px);
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
