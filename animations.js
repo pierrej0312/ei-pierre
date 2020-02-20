@@ -100,13 +100,6 @@ input.forEach(element => {
          }
          //  console.log(test)
         })
-        /*if(element.value.length > 0){
-            submitButton.classList.add("active");
-        }
-        else{
-            submitButton.classList.remove("active");
-
-        }*/
 
     
 
@@ -136,17 +129,9 @@ input.forEach(element => {
    }); 
 });
 
-//submit enable
 
-/*input.forEach(element => {
-    element.addEventListener("keyup", function() {
-        const inputResult = input.value.length;
-        if(input.value.length && input.value.length == false){}
-        if(inputResult && input.value.length == true){console.log(inputResult);}
-        
-    });
-})*/
 
+//remplir activities avec API
 
 let url = 'https://cepegra.yo.fr/kazan_api/'
 let start = 0;
