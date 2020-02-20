@@ -1,6 +1,6 @@
 let hamButton = document.querySelector(".ham-button");
 let nav = document.querySelector(".main-nav")
-
+let activityList
 //ouvre nav
 hamButton.addEventListener("click", function() {
         hamButton.classList.toggle("active");
@@ -11,7 +11,7 @@ let search = document.querySelector(".search");
 let closeSearch = document.querySelector(".close-search");
 let searchForm = document.querySelector(".search-form");
 let more = document.querySelector(".more");
-let activity = document.querySelectorAll(".activity")
+
 
 //ouvre search
 search.addEventListener("click", ev => {
@@ -29,17 +29,20 @@ hamButton.addEventListener("click", function() {
 });
 
 //ouvre activity
-activity.forEach(element => {
-    element.addEventListener("click", function(ev) {
-        console.log(this);
-       if(document.querySelector(".activity.active")) document.querySelector(".activity.active").classList.remove("active")
-        this.classList.add("active");
+let activityOpen = function() {
+    let activity = document.querySelectorAll(".activity")
+    activity.forEach(element => {
+        element.addEventListener("click", function(ev) {
+            console.log(this);
+            if(document.querySelector(".activity.active")) document.querySelector(".activity.active").classList.remove("active")
+                this.classList.add("active");
 
-        //scroll view se positionne sur activity top
-        console.log(this.offsetTop);
-        document.documentElement.scrollTop = this.offsetTop;
-});
-});
+            //scroll view se positionne sur activity top
+            console.log(this.offsetTop);
+            document.documentElement.scrollTop = this.offsetTop;
+        });
+    });
+    
 
 
 //like
@@ -53,6 +56,8 @@ ev.addEventListener("click", function() {
     this.classList.toggle("active");
 });
 });
+}
+
 
 //formulaire
 let input = document.querySelectorAll(".input-contact");
@@ -111,3 +116,59 @@ input.forEach(element => {
     });
 })*/
 
+
+let url = 'https://cepegra.yo.fr/kazan_api/'
+let start = 0;
+/*url api
+https://cepegra.yo.fr/kazan_api/*/
+let activities = document.querySelector(".activities");
+
+let Affiche = function() {
+    activityList.forEach(element => {
+        //console.log(element)
+        activities.innerHTML += `<li class="activity">
+
+        <!--more button-->
+        <a href="" class="more">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <figure>
+            <img class="activity-img" src="${element.img}" alt="${element.text_img}">
+            <figcaption>
+                <h2 class="lieu"><strong>${element.title}</strong>${element.title2}</h2>
+                
+            </figcaption>
+        </figure>
+        <h4 class="location center">${element.situation}</h4>
+        <div class="activity-content">  
+        <h3 class="center">${element.ss_titre}</h3>
+        <p class="activity-descr">${element.texte}</p>
+        <ul class="activity-buttons">
+            <li>
+                <span class="like"></span>
+            </li>
+            <li>
+                <a href="" class="read-more">Read more</a>
+            </li>
+        </ul>
+        </div>
+    </li>`
+    })
+}
+
+
+const Main = function() {
+    axios.get(url)
+    .then(response => {
+        activityList = response.data.feed
+        //console.log(activityList)
+    })
+    .then(Affiche)
+    .then(activityOpen)
+    .catch( function() {
+        alert('erreur de chargement')
+    })
+}
+window.addEventListener("load", Main)

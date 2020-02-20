@@ -2026,6 +2026,7 @@ footer .backlin-list li img {
   .activities .activity:hover .location,
   .activities .activity:focus .location {
     position: absolute;
+    display: none;
     top: -100%;
   }
   .activities .activity.active .activity-content,
