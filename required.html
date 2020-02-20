@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Required</title>
+    <style>
+        button[disabled] {
+            opacity: .5
+        }
+        input:required {
+  border-color: #800000;
+}
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="nom">nom :</label>
+        <input type="text" required>
+        <label for="">Prénom :</label>
+        <input type="text" required>
+        <label for="">Email: </label>
+        <input type="email" required>
+        <label for="">Pays :</label>
+        <input type="text">
+        <label for="">Région :</label>
+        <input type="text">
+        <button disabled>Go</button>
+    </form>
+    <script>
+        let allRequireds = document.querySelectorAll("[required]")
+        let btn = document.querySelector("button[disabled]")
+        //console.log(allRequireds)
+        let test = true
+
+        allRequireds.forEach(required => {
+            required.addEventListener("change", function() {
+                //alert('test')
+                // test des autres champs
+                // impossible de faire un break sur foreach => for
+               for (let i = 0; i < allRequireds.length; i++) {
+                   let theField = allRequireds[i] //recuération d'un champ
+                   
+                    if ( theField.value == '') // si la valeur est vide
+                    {
+                        test = false
+                        break //sortir de la boucle
+                    }
+                    else if (theField.type == 'email') { //si pas vide mais email
+                        alert('email')
+                        let expressionReguliere = /^(([^<>()[]\.,;:s@]+(.[^<>()[]\.,;:s@]+)*)|(.+))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/ //pattern
+                        if (!expressionReguliere.test(theField.value)) { //si value différent du pattern
+                            test = false
+                            break //sortir boucle
+                        }
+
+                    }
+                    else { //value ok
+                        test = true
+                    }
+                }
+
+                if ( test == true) { 
+                    btn.removeAttribute('disabled') //active le btn en retirant attriut desabled
+                }
+                else {
+                    btn.setAttribute('disabled', true) // désactive le btn en ajoutant l'attribut desabled
+                }
+                //  console.log(test)
+            })
+        });
+    </script>
+</body>
+</html>
