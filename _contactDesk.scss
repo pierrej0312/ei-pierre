@@ -2,19 +2,96 @@
     bottom: 30px;
 }
 .contact-us {
-    display:grid;
-    grid: auto / 300px 300px 300px;
-    justify-content: center;
-    align-content: start;
-    justify-items: start;
-    align-items: start;
-    grid-gap: 30px 30px;
-    grid-auto-flow: row;
+    form {
+        display:grid;
+        grid: auto auto auto auto auto auto auto auto auto/ 300px 300px;
+        justify-content: center;
+        align-content: start;
+        justify-items: start;
+        align-items: end;
+        grid-gap: 0px 60px;
+        grid-auto-flow: row;
+        //label prénom
+        :nth-child(3){
+            align-self: start;
+            grid-row: 3/4;
+            grid-column: 1/2;
+        }
+        //input prénom
+        :nth-child(4){
+            align-self: start;
+            grid-row: 4/5;
+            grid-column: 1/2;
+        }
+        //label nom
+        :nth-child(5){
+            align-self: start;
+            grid-row: 3/4;
+            grid-column: 2/3;
+        }
+        //input nom
+        :nth-child(6){
+            align-self: start;
+            grid-row: 4/5;
+            grid-column: 2/3;
+        }
+        //label email
+        :nth-child(7){
+            align-self: start;
+            grid-row: 3/4;
+            grid-column: 3/end;
+        }
+        //input email
+        :nth-child(8){
+            align-self: start;
+            grid-row: 4/5;
+            grid-column: 3/end;
+        }
+        //label objet
+        :nth-child(9){
+            align-self: start;
+            grid-row: 5/6;
+            grid-column: 1/end;
+        }
+        //input objet
+        :nth-child(10){
+            align-self: start;
+            grid-row: 6/7;
+            grid-column: 1/end;
+            width: 100%;
+        }
+        //label message
+        :nth-child(11){
+            align-self: start;
+            grid-row: 7/8;
+            grid-column: 1/end;
+        }
+        //input message
+        :nth-child(12){
+            align-self: start;
+            grid-row: 8/9;
+            grid-column: 1/end;
+            width: 100%;
+        }
+        //send button
+        :last-child{
+            align-self: start;
+            grid-row: 9/end;
+            grid-column: 2/3;
+        }
+    }
     .contact-title {
         text-align:left;
+        align-self: start;
+        grid-row: 1/2;
+        grid-column: 1/end;
+
     }
     .contact-descr {
         text-align:left;
+        align-self: start;
+        grid-row: 2/3;
+        grid-column: 1/end;
     }
 
     input {

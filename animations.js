@@ -68,16 +68,46 @@ input.forEach(element => {
     let submitButton = document.querySelector(".send-button");
 
     // submit active
-    element.addEventListener("keyup", function() {
+    element.addEventListener("change", function() {
         console.log(element.value.length)
-        if(element.value.length > 0){
+        for (let i = 0; i < input.length; i++) {
+            let theField = input[i] //recuération d'un champ
+            
+             if ( theField.value == '') // si la valeur est vide
+             {
+                 test = false
+                 break //sortir de la boucle
+             }
+             else if (theField.type == 'email') { //si pas vide mais email
+                 let expressionReguliere = /^(([^<>()[]\.,;:s@]+(.[^<>()[]\.,;:s@]+)*)|(.+))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/ //pattern
+                 if (!expressionReguliere.test(theField.value)) { //si value différent du pattern
+                     test = false
+                     break //sortir boucle
+                 }
+
+             }
+             else { //value ok
+                 test = true
+             }
+         }
+
+         if ( test == true) { 
+             btn.removeAttribute('disabled') //active le btn en retirant attriut desabled
+         }
+         else {
+             btn.setAttribute('disabled', true) // désactive le btn en ajoutant l'attribut desabled
+         }
+         //  console.log(test)
+        })
+        /*if(element.value.length > 0){
             submitButton.classList.add("active");
         }
         else{
             submitButton.classList.remove("active");
 
-        }
-    });
+        }*/
+
+    
 
 
 
