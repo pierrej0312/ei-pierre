@@ -1738,8 +1738,22 @@ footer .backlin-list li img {
 }
 
 .contact-us .send-button {
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border-radius: 50px;
   border: 1px solid white;
   color: white;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 30px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  overflow: hidden;
+  position: relative;
+  outline: none;
 }
 
 .contact-us .send-button:hover {

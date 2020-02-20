@@ -66,6 +66,7 @@ let input = document.querySelectorAll(".input-contact");
 input.forEach(element => {
 
     let submitButton = document.querySelector(".send-button");
+    let btn = document.querySelector("button[disabled]")
 
     // submit active
     element.addEventListener("change", function() {
